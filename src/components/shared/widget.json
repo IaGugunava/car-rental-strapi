@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_widgets",
+  "info": {
+    "displayName": "widget"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "teaser": {
+      "type": "text",
+      "required": false
+    },
+    "icon": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
