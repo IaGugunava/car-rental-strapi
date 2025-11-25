@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "abouts",
+  "collectionName": "descriptions",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About",
-    "description": "Write about yourself and the content you create"
+    "singularName": "description",
+    "pluralName": "descriptions",
+    "displayName": "description"
   },
   "options": {
     "draftAndPublish": true
@@ -22,21 +21,17 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
-    "blocks": {
-      "type": "dynamiczone",
+    "description": {
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "components": [
-        "shared.media",
-        "shared.quote",
-        "shared.rich-text",
-        "shared.slider"
-      ]
+      "required": true
     }
   }
 }

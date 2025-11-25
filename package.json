@@ -20,6 +20,7 @@
     "@strapi/plugin-users-permissions": "5.23.4",
     "@strapi/strapi": "5.23.4",
     "better-sqlite3": "11.3.0",
+    "emailjs": "^4.0.3",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",

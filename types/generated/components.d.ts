@@ -71,6 +71,7 @@ export interface SharedWidget extends Struct.ComponentSchema {
     icon: Schema.Attribute.Text;
     teaser: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.Text;
   };
 }
 

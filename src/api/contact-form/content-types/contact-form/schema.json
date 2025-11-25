@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "about_uses",
+  "collectionName": "contact_forms",
   "info": {
-    "singularName": "about-us",
-    "pluralName": "about-uses",
-    "displayName": "about us"
+    "singularName": "contact-form",
+    "pluralName": "contact-forms",
+    "displayName": "contactForm"
   },
   "options": {
     "draftAndPublish": true
@@ -15,47 +15,43 @@
     }
   },
   "attributes": {
-    "image": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "description": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.widget",
-      "repeatable": true
-    },
-    "title": {
+    "name": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
-    "teaser": {
-      "type": "text",
+    "email": {
+      "type": "email",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "minLength": 7,
+      "maxLength": 11,
+      "required": true
+    },
+    "message": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
     }
   }
 }

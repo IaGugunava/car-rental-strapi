@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "abouts",
+  "collectionName": "why_choose_uses",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About",
-    "description": "Write about yourself and the content you create"
+    "singularName": "why-choose-us",
+    "pluralName": "why-choose-uses",
+    "displayName": "WhyChooseUs"
   },
   "options": {
     "draftAndPublish": true
@@ -22,21 +21,18 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
-    "blocks": {
-      "type": "dynamiczone",
+    "items": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "components": [
-        "shared.media",
-        "shared.quote",
-        "shared.rich-text",
-        "shared.slider"
-      ]
+      "component": "shared.widget",
+      "repeatable": true
     }
   }
 }

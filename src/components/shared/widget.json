@@ -15,6 +15,10 @@
     },
     "icon": {
       "type": "text"
+    },
+    "url": {
+      "type": "text",
+      "required": false
     }
   },
   "config": {}

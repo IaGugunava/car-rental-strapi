@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_videos",
+  "info": {
+    "singularName": "about-video",
+    "pluralName": "about-videos",
+    "displayName": "AboutVideo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}

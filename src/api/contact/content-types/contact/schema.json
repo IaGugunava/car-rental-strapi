@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "about_uses",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "about-us",
-    "pluralName": "about-uses",
-    "displayName": "about us"
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "contact"
   },
   "options": {
     "draftAndPublish": true
@@ -15,23 +15,7 @@
     }
   },
   "attributes": {
-    "image": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "description": {
+    "item": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -39,7 +23,8 @@
         }
       },
       "component": "shared.widget",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "title": {
       "type": "string",
@@ -49,13 +34,28 @@
         }
       }
     },
-    "teaser": {
-      "type": "text",
+    "description": {
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "image": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
