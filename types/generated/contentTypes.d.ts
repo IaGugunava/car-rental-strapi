@@ -646,13 +646,6 @@ export interface ApiCarCar extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    available: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     bookings: Schema.Attribute.Relation<'oneToMany', 'api::booking.booking'>;
     brand: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -1151,6 +1144,46 @@ export interface ApiMainBannerMainBanner extends Struct.SingleTypeSchema {
           localized: false;
         };
       }>;
+  };
+}
+
+export interface ApiPagePage extends Struct.CollectionTypeSchema {
+  collectionName: 'pages';
+  info: {
+    displayName: 'page';
+    pluralName: 'pages';
+    singularName: 'page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
+    page: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1847,6 +1880,7 @@ declare module '@strapi/strapi' {
       'api::feature.feature': ApiFeatureFeature;
       'api::global.global': ApiGlobalGlobal;
       'api::main-banner.main-banner': ApiMainBannerMainBanner;
+      'api::page.page': ApiPagePage;
       'api::social.social': ApiSocialSocial;
       'api::statistic.statistic': ApiStatisticStatistic;
       'api::translation.translation': ApiTranslationTranslation;
